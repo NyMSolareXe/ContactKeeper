@@ -8,7 +8,6 @@ import {
     LOGOUT,
     CLEAR_ERRORS
 } from '../types';
-import { findAllByTestId } from '@testing-library/react';
 
 
 export default (state, action) => {
@@ -27,7 +26,7 @@ export default (state, action) => {
                 ...state,
                 ...action.payload,
                 isAuthenticated: true,
-                loading: findAllByTestId
+                loading: false
             };
         case REGISTER_FAIL:
         case AUTH_ERROR:
